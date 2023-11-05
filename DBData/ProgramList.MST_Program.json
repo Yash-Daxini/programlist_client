@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "64501872803f838ea212860c"
+  },
+  "program_name": "Reverse Integer",
+  "program_topic": "array",
+  "program_link": "https://leetcode.com/problems/reverse-integer/",
+  "solution_link": "https://leetcode.com/problems/reverse-integer/solutions/",
+  "difficulty": "Medium",
+  "issolved": false
+},
+{
+  "_id": {
+    "$oid": "6450eabcce5e269b610285d6"
+  },
+  "program_name": "Letter Combinations of a phone number",
+  "program_topic": "Backtracking",
+  "program_link": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+  "solution_link": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/solutions/",
+  "difficulty": "Medium",
+  "issolved": false
+},
+{
+  "_id": {
+    "$oid": "6450eaf3ce5e269b610285d8"
+  },
+  "program_name": "Regular Expression Matching",
+  "program_topic": "Dynamic Programming",
+  "program_link": "https://leetcode.com/problems/regular-expression-matching/",
+  "solution_link": "https://leetcode.com/problems/regular-expression-matching/solutions/",
+  "difficulty": "Hard",
+  "issolved": false
+},
+{
+  "_id": {
+    "$oid": "6450eb30ce5e269b610285d9"
+  },
+  "program_name": "Remove Nth Node From End of List",
+  "program_topic": "Linked List",
+  "program_link": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+  "solution_link": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/",
+  "difficulty": "Medium",
+  "issolved": false
+},
+{
+  "_id": {
+    "$oid": "6450eb72ce5e269b610285db"
+  },
+  "program_name": "Find the Index of the First Occurrence in a String",
+  "program_topic": "String",
+  "program_link": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+  "solution_link": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/solutions/",
+  "difficulty": "Easy",
+  "issolved": false
+},
+{
+  "_id": {
+    "$oid": "6450ebfece5e269b610285dd"
+  },
+  "program_name": "Find First and Last Position of Element in Sorted Array",
+  "program_topic": "Binary Search",
+  "program_link": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+  "solution_link": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/solutions/",
+  "difficulty": "Medium",
+  "issolved": false
+},
+{
+  "_id": {
+    "$oid": "6450ec75ce5e269b610285df"
+  },
+  "program_name": "Remove Duplicates from Sorted Array",
+  "program_topic": "array",
+  "program_link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+  "solution_link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/solutions/",
+  "difficulty": "Easy",
+  "issolved": false
+},
+{
+  "_id": {
+    "$oid": "6450ec9bce5e269b610285e0"
+  },
+  "program_name": "Trapping Rain Water",
+  "program_topic": "array",
+  "program_link": "https://leetcode.com/problems/trapping-rain-water/",
+  "solution_link": "https://leetcode.com/problems/trapping-rain-water/solutions/",
+  "difficulty": "Hard",
+  "issolved": false
+},
+{
+  "_id": {
+    "$oid": "64622262121b171e47d7863a"
+  },
+  "program_name": "Palindrome Number",
+  "program_topic": "Mathematics",
+  "program_link": "https://leetcode.com/problems/palindrome-number/",
+  "solution_link": "https://leetcode.com/problems/palindrome-number/solutions/",
+  "difficulty": "Easy",
+  "issolved": false
+},
+{
+  "_id": {
+    "$oid": "64622325121b171e47d7863b"
+  },
+  "program_name": "Palindrome Linked List",
+  "program_topic": "Linked List",
+  "program_link": "https://leetcode.com/problems/palindrome-linked-list/",
+  "solution_link": "https://leetcode.com/problems/palindrome-linked-list/solutions/",
+  "difficulty": "Easy",
+  "issolved": false
+},
+{
+  "_id": {
+    "$oid": "6462236e121b171e47d7863c"
+  },
+  "program_name": "Find Palindrome With Fixed Length",
+  "program_topic": "array",
+  "program_link": "https://leetcode.com/problems/find-palindrome-with-fixed-length/",
+  "solution_link": "https://leetcode.com/problems/find-palindrome-with-fixed-length/solutions/",
+  "difficulty": "Medium",
+  "issolved": false
+}]

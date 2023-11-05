@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "643a42a8ee9c04ab75e902e4"
+  },
+  "array": 2
+},
+{
+  "_id": {
+    "$oid": "643a44042c93d1cd8d4a8c79"
+  },
+  "bit manipulation": 1
+}]

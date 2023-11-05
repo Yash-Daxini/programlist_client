@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "644c0069496e1b378a0db5c4"
+  },
+  "topic_name": "Linked List"
+},
+{
+  "_id": {
+    "$oid": "64501872803f838ea212860b"
+  },
+  "topic_name": "Mathematics"
+},
+{
+  "_id": {
+    "$oid": "6450eabcce5e269b610285d5"
+  },
+  "topic_name": "Backtracking"
+},
+{
+  "_id": {
+    "$oid": "6450eaf3ce5e269b610285d7"
+  },
+  "topic_name": "Dynamic Programming"
+},
+{
+  "_id": {
+    "$oid": "6450eb72ce5e269b610285da"
+  },
+  "topic_name": "String"
+},
+{
+  "_id": {
+    "$oid": "6450ebfece5e269b610285dc"
+  },
+  "topic_name": "Binary Search"
+},
+{
+  "_id": {
+    "$oid": "65278091a6698f6e8ed3d3db"
+  },
+  "topic_name": "Dynamic Programming"
+},
+{
+  "_id": {
+    "$oid": "652d3e7ab4f8b063048bd66c"
+  },
+  "topic_name": "array"
+},
+{
+  "_id": {
+    "$oid": "65363c5e1af515244eaa13fa"
+  },
+  "topic_name": "array"
+},
+{
+  "_id": {
+    "$oid": "65363c671af515244eaa13fc"
+  },
+  "topic_name": "Backtracking"
+},
+{
+  "_id": {
+    "$oid": "6536cd83fb532d25eb9235d5"
+  },
+  "topic_name": "array"
+},
+{
+  "_id": {
+    "$oid": "6536cd8efb532d25eb9235d9"
+  },
+  "topic_name": "Backtracking"
+},
+{
+  "_id": {
+    "$oid": "6536cd9bfb532d25eb9235dd"
+  },
+  "topic_name": "String"
+},
+{
+  "_id": {
+    "$oid": "6536cda5fb532d25eb9235e1"
+  },
+  "topic_name": "Linked List"
+},
+{
+  "_id": {
+    "$oid": "6536cdb4fb532d25eb9235e5"
+  },
+  "topic_name": "Linked List"
+},
+{
+  "_id": {
+    "$oid": "653b9dbe7a412e12e0ac685a"
+  },
+  "topic_name": "array"
+},
+{
+  "_id": {
+    "$oid": "653bf26c1344b9e24f3e11ae"
+  },
+  "topic_name": "array"
+},
+{
+  "_id": {
+    "$oid": "653bf4631344b9e24f3e11ed"
+  },
+  "topic_name": "array"
+}]

@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "642ef29d38bda1fabb65b2af"
+  },
+  "user_name": "admin",
+  "user_password": "a",
+  "user_emailaddress": "admin@gmail.com",
+  "user_mobilenumber": "9876543210"
+},
+{
+  "_id": {
+    "$oid": "644cdd302213c1842118b341"
+  },
+  "user_name": "yash",
+  "user_password": "y",
+  "user_emailaddress": "200540107113@darshan.ac.in",
+  "user_mobilenumber": "1234567890"
+}]
