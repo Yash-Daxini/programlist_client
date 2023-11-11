@@ -8,7 +8,7 @@ const SelectByID = () => {
   const params = useParams();
   useEffect(() => {
     // fetch("https://localhost:5001/api/MST_Program/" + params.id)
-    fetch(`http://localhost:8000/programs/${params.id}`)
+    fetch(`https://programlist-backend.onrender.com/programs/${params.id}`)
       .then((res) => {
         return res.json();
       })

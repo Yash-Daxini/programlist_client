@@ -7,7 +7,7 @@ const SelectAllTopic = () => {
 
   useEffect(() => {
     // fetch("https://localhost:5001/api/MST_ProgramTopic")
-    fetch("http://localhost:8000/topic")
+    fetch("https://programlist-backend.onrender.com/topic")
       .then((res) => {
         return res.json();
       })

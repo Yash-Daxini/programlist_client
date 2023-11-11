@@ -11,7 +11,7 @@ const SelectByTopicName = () => {
     // fetch(
     //   `https://localhost:5001/api/MST_Program/programsByTopicName/${params.name}`
     // )
-    fetch(`http://localhost:8000/programs/topics/${params.name}`)
+    fetch(`https://programlist-backend.onrender.com/programs/topics/${params.name}`)
       .then((res) => {
         return res.json();
       })

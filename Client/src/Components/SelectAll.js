@@ -13,7 +13,7 @@ const SelectAll = () => {
 
   useEffect(() => {
     // fetch("https://localhost:5001/api/MST_Program")
-    fetch("http://localhost:8000/programs")
+    fetch("https://programlist-backend.onrender.com/programs")
       .then((res) => {
         return res.json();
       })
