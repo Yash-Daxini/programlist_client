@@ -1,0 +1,35 @@
+services:
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongodb-data:/data/db
+
+  programlist_server:
+    build:
+      context: ./Server
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb
+
+  programlist_client:
+    build: 
+      context: ./Client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - programlist_server
+
+  programlist_admin:
+    build: 
+      context: ./Admin
+    ports:
+      - "3001:3000"
+    depends_on:
+      - programlist_server
+
+volumes:
+  mongodb-data:
