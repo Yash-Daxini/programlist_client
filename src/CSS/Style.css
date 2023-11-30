@@ -1,23 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-*{
-   font-family: 'Poppins', sans-serif;
+
+* {
+    font-family: 'Poppins', sans-serif;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
+
 html {
     font-size: 10px;
 }
-.App{
-    min-height: 100vh;  
+
+.App {
+    min-height: 100vh;
 }
+
 @media (min-width: 768px) {
     html {
         font-size: 16px;
     }
 }
-.homeMain{
+
+.homeMain {
     margin: 0;
     padding: 0;
     /* background-color: #333; */
@@ -28,37 +34,46 @@ html {
     background-color: rgb(40 40 40/1);
     color: #03a9f4;
 }
-.homeMainChild{
+
+.homeMainChild {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.customeClassForNav{
+
+.customeClassForNav {
     background-color: rgb(40 40 40/1);
     /* background-color: #333; */
     color: #fff;
 }
-.darkTheme{
+
+.darkTheme {
     background-color: rgb(40 40 40/1);
-    color:#fff;
+    color: #fff;
 }
-.codeIconDiv h1 ion-icon{
+
+.codeIconDiv h1 ion-icon {
     font-size: 181px;
 }
-form input{
-    color:#333;
+
+form input {
+    color: #333;
 }
-table td , table th{
+
+table td,
+table th {
     color: white;
     padding: 50px;
 }
+
 table {
     margin-top: 50px;
     border-collapse: separate;
     border-spacing: 0 1em;
 }
-.customBadgeSuccess span{
+
+.customBadgeSuccess span {
     /* background-color: #556B2F;
      */
     background-color: rgb(0 184 163/0.2);
@@ -70,7 +85,8 @@ table {
     padding: 6px;
     font-weight: 900;
 }
-.customBadgeWarning span{
+
+.customBadgeWarning span {
     background-color: rgb(255 192 30/0.2);
     color: rgb(255 192 30/1);
     height: 20px;
@@ -80,7 +96,8 @@ table {
     padding: 6px;
     font-weight: 500;
 }
-.customBadgeDanger span{
+
+.customBadgeDanger span {
     background-color: rgb(255 55 95/0.2);
     color: rgb(255 55 95/1);
     height: 20px;
@@ -90,123 +107,173 @@ table {
     padding: 6px;
     font-weight: 900;
 }
+
 .form-control {
     border-radius: 40px;
 }
-.selectAll table{
+
+.selectAll table {
     margin-top: 20px;
 }
-.programPageTopics{
+
+.programPageTopics {
     background-color: #333;
     border-radius: 40px;
     padding: 10px;
     transition: 0.7s;
 }
-.programPageTopics:hover{
-    background:#03a9f4;
+
+.programPageTopics:hover {
+    background: #03a9f4;
 }
-.programPageTopics:hover .cardNumber{
-    color:#fff;
-    font-weight:900;
+
+.programPageTopics:hover .cardNumber {
+    color: #fff;
+    font-weight: 900;
 }
-.cardBox{
-    margin-left: 40px ;
-    position:relative;
-    width:100%;
-    padding:20px;
-    display:grid;   
-    grid-template-columns:repeat(2,2fr);
-    grid-gap:20px;
+
+.cardBox {
+    margin-left: 40px;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 20px;
 }
-.cardBox .card{
-    position:relative;
-    background:#333;
-    padding:20px;
+
+.cardBox .card {
+    position: relative;
+    background: #333;
+    padding: 20px;
     width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor:pointer;
-    border:none;
-    border-radius:40px;
-    transition:1s;
+    cursor: pointer;
+    border: none;
+    border-radius: 40px;
+    transition: 1s;
 }
-.cardBox .card:hover{
-    background:#03a9f4;
+
+.cardBox .card:hover {
+    background: #03a9f4;
 }
-.cardBox .card:hover .cardNumber{
-    color:#fff;
-    font-weight:900;
+
+.cardBox .card:hover .cardNumber {
+    color: #fff;
+    font-weight: 900;
 }
-.cardBox .card:hover .cardIcon{
-    color:#fff;
-    font-weight:900;
+
+.cardBox .card:hover .cardIcon {
+    color: #fff;
+    font-weight: 900;
 }
-.cardBox .card:hover .cardName{
-    color:#fff;
-    font-weight:900;
+
+.cardBox .card:hover .cardName {
+    color: #fff;
+    font-weight: 900;
 }
-.cardBox .card .cardNumber{
-    position:relative;
-    font-size:2em;
-    font-weight:600;
-    transition:0.5s;
+
+.cardBox .card .cardNumber {
+    position: relative;
+    font-size: 2em;
+    font-weight: 600;
+    transition: 0.5s;
 }
-.cardBox .card .Link{
+
+.cardBox .card .Link {
     text-decoration: none;
 }
-.cardBox .card .cardName{
+
+.cardBox .card .cardName {
     /* color:#999; */
-    font-size:1.5em;
-    transition:0.5s;
+    font-size: 1.5em;
+    transition: 0.5s;
     text-transform: capitalize;
 }
-@media only screen and (max-width: 1020px)  {
-    .cardBox{
+
+@media only screen and (max-width: 1020px) {
+    .cardBox {
         margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
-    .App{
+
+    .App {
         min-width: 100vw;
     }
 }
-@media only screen and (max-width: 400px)  {
-    *{
+
+@media (min-width:0px) and (max-width:500px) {
+    .selectAll {
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+        padding: 5px;
+    }
+
+    .selectAll table {
+        font-size: 7px;
+        letter-spacing: .3px;
+    }
+    .customBadgeSuccess span {
+        font-size: 5px;
+    }
+    
+    .customBadgeWarning span {
+        font-size: 5px;
+    }
+    
+    .customBadgeDanger span {
+        font-size: 5px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .selectAll {
         margin: 0px;
         padding: 0px;
-        font-size: 20px;
+        font-size: 10px;
     }
-    .App{
+
+    .App {
         min-width: 100vw;
     }
+
     .container-sm {
         width: 100%;
     }
-    .navbarToggleButton{
+
+    .navbarToggleButton {
         background: #fff;
     }
-    .homeMain p{
+
+    .homeMain p {
         font-size: 500px;
         letter-spacing: 1px;
     }
-    .homeMainChild{
+
+    .homeMainChild {
         margin: 0;
         padding: 0;
     }
-    .cardBox{
+
+    .cardBox {
         margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
-    .cardBox .card{
+
+    .cardBox .card {
         padding-top: 12px;
     }
-    .cardBox .card .cardName{
+
+    .cardBox .card .cardName {
         font-size: 25px;
     }
+    
 }

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const SelectAll = () => {
   const [programObj, setProgramObj] = useState([]);
-  // const [topicObj, setTopicObj] = useState([]);
   const [filterObj, setFilterObj] = useState({
     program_topic: "all",
     difficulty: "all",
@@ -12,7 +11,6 @@ const SelectAll = () => {
   const [filterdData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    // fetch("https://localhost:5001/api/MST_Program")
     fetch("https://programlist-backend.onrender.com/programs")
       .then((res) => {
         return res.json();
@@ -20,21 +18,9 @@ const SelectAll = () => {
       .then((data) => {
         setProgramObj(data);
         setFilteredData(data);
-        console.warn(data);
-        // setTopicObj(data.program_topic);
       })
       .catch((e) => {});
   }, []);
-
-  // useEffect(() => {
-  //   fetch(`https://localhost:5001/api/MST_ProgramTopic/`)
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //     })
-  //     .catch((e) => {});
-  // }, []);
 
   const allPrograms = filterdData.map((program) => {
     return (
@@ -116,28 +102,10 @@ const SelectAll = () => {
     );
   });
 
-  /* Filter Using API calls */
-  // const fetchUsingFilter = (program_topic, difficulty) => {
-  //   // console.warn(program_topic + " " + difficulty);
-  //   fetch(
-  //     `https://localhost:5001/api/MST_Program/getByFilter/${program_topic}/${difficulty}`
-  //   )
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       setProgramObj(data);
-  //       filterObj.program_topic = program_topic;
-  //       filterObj.difficulty = difficulty;
-  //     })
-  //     .catch((e) => {});
-  // };
-
   return (
     <div className="selectAll container-sm darkTheme p-5">
       <div>
         <div className="selectAll container p-5 darkTheme">
-          {/* <h1>Topics</h1> */}
           <div className="text-center d-flex gap-5 flex-wrap">{allTopics}</div>
         </div>
       </div>
@@ -150,9 +118,8 @@ const SelectAll = () => {
             className="form-control m-2"
             value={filterObj.program_topic}
             onChange={(e) => {
-              // console.warn(filterObj.program_topic + " " + e.target.value);
               setFilterObj({ ...filterObj, program_topic: e.target.value });
-              // setTimeout(() => {
+              
               if (e.target.value === "all" && filterObj.difficulty === "all") {
                 setFilteredData(programObj);
               } else if (e.target.value === "all") {
@@ -176,10 +143,6 @@ const SelectAll = () => {
                   )
                 );
               }
-              // console.warn(filterObj.program_topic);
-              // }, 3000);
-              // console.warn(filterdData);
-              // fetchUsingFilter(e.target.value, filterObj.difficulty);
             }}
           >
             <option value={"all"}>Select Topic Name</option>
@@ -220,7 +183,6 @@ const SelectAll = () => {
                   )
                 );
               }
-              // fetchUsingFilter(filterObj.program_topic, e.target.value);
             }}
           >
             <option value={"all"}>Select Difficulty</option>
@@ -228,14 +190,6 @@ const SelectAll = () => {
             <option>Medium</option>
             <option>Hard</option>
           </select>
-          {/* <button
-            className="btn btn-outline-success h-75 m-2"
-            onClick={(e) => {
-              fetchUsingFilter(filterObj.program_topic,filterObj.difficulty);
-            }}
-          >
-            Search
-          </button> */}
         </div>
       </div>
       <div className="table-responsive">
