@@ -9,19 +9,24 @@ const SelectAll = () => {
     difficulty: "all",
   });
   const [filterdData, setFilteredData] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    fetch("https://programlist-backend.onrender.com/programs")
+    fetchPrograms();
+  }, [isLoaded]);
+
+  const fetchPrograms = async () => {
+    await fetch("https://programlist-backend.onrender.com/programs")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         setProgramObj(data);
         setFilteredData(data);
+        setIsLoaded(true);
       })
       .catch((e) => {});
-  }, []);
-
+  };
   const allPrograms = filterdData.map((program) => {
     return (
       <>
@@ -65,6 +70,29 @@ const SelectAll = () => {
     );
   });
 
+  let allProgramsPlaceholder = [];
+  for (let i = 0; i < 9; i++) {
+    allProgramsPlaceholder.push(
+      <tr>
+        <td className="placeholder-glow">
+          <span className="placeholder col-6"></span>
+        </td>
+        <td className="placeholder-glow">
+          <span className="placeholder col-6"></span>
+        </td>
+        <td className="placeholder-glow">
+          <span className="placeholder col-6"></span>
+        </td>
+        <td className="placeholder-glow">
+          <span className="placeholder col-6"></span>
+        </td>
+        <td className="placeholder-glow">
+          <span className="placeholder col-6"></span>
+        </td>
+      </tr>
+    );
+  }
+
   const topicsSet = new Set();
 
   programObj.forEach((obj) => {
@@ -94,7 +122,12 @@ const SelectAll = () => {
               className="text-decoration-none cardNumber"
               to={`/SelectAllTopic/SelectByTopicName/${topic}`}
             >
-              <div className="cardName"style={{textTransform:"capitalize",letterSpacing:"1px"}}>{topic}</div>
+              <div
+                className="cardName"
+                style={{ textTransform: "capitalize", letterSpacing: "1px" }}
+              >
+                {topic}
+              </div>
             </Link>
           </div>
         </div>
@@ -102,11 +135,22 @@ const SelectAll = () => {
     );
   });
 
+  let allTopicsPlaceholder = [];
+  for (let i = 0; i < 9; i++) {
+    allTopicsPlaceholder.push(
+      <div className="text-center placeholder-glow w-25">
+        <span className="placeholder col-6"></span>
+      </div>
+    );
+  }
+
   return (
     <div className="selectAll container-sm darkTheme p-5">
       <div>
         <div className="selectAll container p-5 darkTheme">
-          <div className="text-center d-flex gap-5 flex-wrap">{allTopics}</div>
+          <div className="text-center d-flex gap-5 flex-wrap">
+            {isLoaded.toString() === "false" ? allTopicsPlaceholder : allTopics}
+          </div>
         </div>
       </div>
       <div className="d-flex justify-content-between">
@@ -119,7 +163,7 @@ const SelectAll = () => {
             value={filterObj.program_topic}
             onChange={(e) => {
               setFilterObj({ ...filterObj, program_topic: e.target.value });
-              
+
               if (e.target.value === "all" && filterObj.difficulty === "all") {
                 setFilteredData(programObj);
               } else if (e.target.value === "all") {
@@ -203,7 +247,7 @@ const SelectAll = () => {
               <th scope="col">Difficulty</th>
             </tr>
           </thead>
-          {allPrograms.length === 0 ? (
+          {allPrograms.length === 0 && isLoaded ? (
             <tbody>
               <tr>
                 <td colSpan={5}>
@@ -212,7 +256,7 @@ const SelectAll = () => {
               </tr>
             </tbody>
           ) : (
-            <tbody>{allPrograms}</tbody>
+            <tbody>{isLoaded ? allPrograms : allProgramsPlaceholder}</tbody>
           )}
         </table>
       </div>

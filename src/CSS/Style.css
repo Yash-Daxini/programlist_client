@@ -192,6 +192,9 @@ table {
     transition: 0.5s;
     text-transform: capitalize;
 }
+.placeholder{
+    border-radius:40px;
+}
 
 @media only screen and (max-width: 1020px) {
     .cardBox {
