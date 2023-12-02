@@ -145,7 +145,7 @@ const SelectAll = () => {
   }
 
   return (
-    <div className="selectAll container-sm darkTheme p-5">
+    <div className="selectAll container-sm darkTheme p-2 mt-2">
       <div>
         <div className="selectAll container p-5 darkTheme">
           <div className="text-center d-flex gap-5 flex-wrap">

@@ -11,7 +11,7 @@ const Home = () => {
           </div>
           <div className='m-4'>
             <h1 className='text-light m-5'>A New Way to Learn</h1>
-            <p><h6>Best platform to help you enhance your skills,<br/> expand your knowledge and prepare for technical interviews.</h6></p>
+            <p className='homepageDescription'>Best platform to help you enhance your skills,<br/> expand your knowledge and prepare for technical interviews.</p>
           </div>
         </div>
         <div className='m-5 d-flex justify-content-center align-items-center'>
