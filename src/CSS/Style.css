@@ -236,6 +236,10 @@ table {
     .customBadgeDanger span {
         font-size: 5px;
     }
+    .homepageDescription{
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -255,11 +259,6 @@ table {
 
     .navbarToggleButton {
         background: #fff;
-    }
-
-    .homeMain p {
-        font-size: 500px;
-        letter-spacing: 1px;
     }
 
     .homeMainChild {
@@ -282,5 +281,4 @@ table {
     .cardBox .card .cardName {
         font-size: 25px;
     }
-    
 }
