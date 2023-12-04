@@ -117,19 +117,19 @@ const SelectAll = () => {
     return (
       <>
         <div className="text-center">
-          <div className="programPageTopics">
-            <Link
-              className="text-decoration-none cardNumber"
-              to={`/SelectAllTopic/SelectByTopicName/${topic}`}
-            >
+          <Link
+            className="text-decoration-none cardNumber"
+            to={`/SelectAllTopic/SelectByTopicName/${topic}`}
+          >
+            <div className="programPageTopics">
               <div
                 className="cardName"
                 style={{ textTransform: "capitalize", letterSpacing: "1px" }}
               >
                 {topic}
               </div>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </>
     );
@@ -159,7 +159,7 @@ const SelectAll = () => {
         </div>
         <div className="d-flex justify-content-center w-50">
           <select
-            className="form-control m-2"
+            className="form-control m-2 dropdown"
             value={filterObj.program_topic}
             onChange={(e) => {
               setFilterObj({ ...filterObj, program_topic: e.target.value });
@@ -193,7 +193,7 @@ const SelectAll = () => {
             {allTopicsName}
           </select>
           <select
-            className="form-control m-2"
+            className="form-control m-2 dropdown"
             value={filterObj.difficulty}
             onChange={(e) => {
               setFilterObj({

@@ -118,9 +118,12 @@ table {
 
 .programPageTopics {
     background-color: #333;
-    border-radius: 40px;
+    height: 45px;
+    border-radius: 20px;
     padding: 10px;
     transition: 0.7s;
+    font-size: 15px;
+    letter-spacing: .5px;
 }
 
 .programPageTopics:hover {
@@ -192,13 +195,39 @@ table {
     transition: 0.5s;
     text-transform: capitalize;
 }
-.placeholder{
-    border-radius:40px;
+
+.placeholder {
+    border-radius: 40px;
 }
-.homepageDescription{
+
+.homepageDescription {
     font-size: 20px;
     letter-spacing: 0.5px;
 }
+
+.dropdown,
+.dropdown option {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.dropdown:focus {
+    background-color: #333;
+    color: #fff;
+}
+
+/* .dropdown option {
+    background-color: #333;
+    box-shadow: 0px 1px 0 #333, 0px -1px 0 #333;
+    -webkit-box-shadow: 0px 1px 0 #333, 0px -1px 0 #333;
+    -moz-box-shadow: 0px 1px 0 #333, 0px -1px 0 #333;
+} */
+
+/* .dropdown option:hover {
+    background-color: #333;
+} */
 
 @media only screen and (max-width: 1020px) {
     .cardBox {
@@ -225,18 +254,20 @@ table {
         font-size: 7px;
         letter-spacing: .3px;
     }
+
     .customBadgeSuccess span {
         font-size: 5px;
     }
-    
+
     .customBadgeWarning span {
         font-size: 5px;
     }
-    
+
     .customBadgeDanger span {
         font-size: 5px;
     }
-    .homepageDescription{
+
+    .homepageDescription {
         font-size: 15px;
         letter-spacing: 0.5px;
     }
