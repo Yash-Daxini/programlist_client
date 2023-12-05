@@ -12,7 +12,9 @@ const SelectAll = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    fetchPrograms();
+    // setTimeout(() => {
+      fetchPrograms();
+    // }, 4000);
   }, [isLoaded]);
 
   const fetchPrograms = async () => {
@@ -138,8 +140,8 @@ const SelectAll = () => {
   let allTopicsPlaceholder = [];
   for (let i = 0; i < 9; i++) {
     allTopicsPlaceholder.push(
-      <div className="text-center placeholder-glow w-25">
-        <span className="placeholder col-6"></span>
+      <div className="text-center placeholder-glow topicsNamePlaceholder">
+        <span className="placeholder w-100 h-100"></span>
       </div>
     );
   }
@@ -158,82 +160,98 @@ const SelectAll = () => {
           <h1>Programs</h1>
         </div>
         <div className="d-flex justify-content-center w-50">
-          <select
-            className="form-control m-2 dropdown"
-            value={filterObj.program_topic}
-            onChange={(e) => {
-              setFilterObj({ ...filterObj, program_topic: e.target.value });
+          {isLoaded.toString() === "false" ? (
+            <>
+              <div className="placeholder-glow form-control m-2 dropdown w-100 placeholderOfDropdown">
+                <span className="placeholder w-100 h-100"></span>
+              </div>
+              <div className="placeholder-glow form-control m-2 dropdown w-100 placeholderOfDropdown">
+                <span className="placeholder w-100 h-100"></span>
+              </div>
+            </>
+          ) : (
+            <>
+              <select
+                className="form-control m-2 dropdown"
+                value={filterObj.program_topic}
+                onChange={(e) => {
+                  setFilterObj({ ...filterObj, program_topic: e.target.value });
 
-              if (e.target.value === "all" && filterObj.difficulty === "all") {
-                setFilteredData(programObj);
-              } else if (e.target.value === "all") {
-                setFilteredData(
-                  programObj.filter(
-                    (program) => program.difficulty === filterObj.difficulty
-                  )
-                );
-              } else if (filterObj.difficulty === "all") {
-                setFilteredData(
-                  programObj.filter(
-                    (program) => program.program_topic === e.target.value
-                  )
-                );
-              } else {
-                setFilteredData(
-                  programObj.filter(
-                    (program) =>
-                      program.program_topic === e.target.value &&
-                      program.difficulty === filterObj.difficulty
-                  )
-                );
-              }
-            }}
-          >
-            <option value={"all"}>Select Topic Name</option>
-            {allTopicsName}
-          </select>
-          <select
-            className="form-control m-2 dropdown"
-            value={filterObj.difficulty}
-            onChange={(e) => {
-              setFilterObj({
-                ...filterObj,
-                difficulty: e.target.value,
-              });
-              if (
-                e.target.value === "all" &&
-                filterObj.program_topic === "all"
-              ) {
-                setFilteredData(programObj);
-              } else if (e.target.value === "all") {
-                setFilteredData(
-                  programObj.filter(
-                    (program) =>
-                      program.program_topic === filterObj.program_topic
-                  )
-                );
-              } else if (filterObj.program_topic === "all") {
-                setFilteredData(
-                  programObj.filter(
-                    (program) => program.difficulty === e.target.value
-                  )
-                );
-              } else {
-                setFilteredData(
-                  programObj.filter(
-                    (program) =>
-                      program.difficulty === e.target.value &&
-                      program.program_topic === filterObj.program_topic
-                  )
-                );
-              }
-            }}
-          >
-            <option value={"all"}>Select Difficulty</option>
-            <option>Easy</option>
-            <option>Medium</option>
-            <option>Hard</option>
-          </select>
+                  if (
+                    e.target.value === "all" &&
+                    filterObj.difficulty === "all"
+                  ) {
+                    setFilteredData(programObj);
+                  } else if (e.target.value === "all") {
+                    setFilteredData(
+                      programObj.filter(
+                        (program) => program.difficulty === filterObj.difficulty
+                      )
+                    );
+                  } else if (filterObj.difficulty === "all") {
+                    setFilteredData(
+                      programObj.filter(
+                        (program) => program.program_topic === e.target.value
+                      )
+                    );
+                  } else {
+                    setFilteredData(
+                      programObj.filter(
+                        (program) =>
+                          program.program_topic === e.target.value &&
+                          program.difficulty === filterObj.difficulty
+                      )
+                    );
+                  }
+                }}
+              >
+                <option value={"all"}>Select Topic Name</option>
+                {allTopicsName}
+              </select>
+              <select
+                className="form-control m-2 dropdown"
+                value={filterObj.difficulty}
+                onChange={(e) => {
+                  setFilterObj({
+                    ...filterObj,
+                    difficulty: e.target.value,
+                  });
+                  if (
+                    e.target.value === "all" &&
+                    filterObj.program_topic === "all"
+                  ) {
+                    setFilteredData(programObj);
+                  } else if (e.target.value === "all") {
+                    setFilteredData(
+                      programObj.filter(
+                        (program) =>
+                          program.program_topic === filterObj.program_topic
+                      )
+                    );
+                  } else if (filterObj.program_topic === "all") {
+                    setFilteredData(
+                      programObj.filter(
+                        (program) => program.difficulty === e.target.value
+                      )
+                    );
+                  } else {
+                    setFilteredData(
+                      programObj.filter(
+                        (program) =>
+                          program.difficulty === e.target.value &&
+                          program.program_topic === filterObj.program_topic
+                      )
+                    );
+                  }
+                }}
+              >
+                <option value={"all"}>Select Difficulty</option>
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+              </select>
+            </>
+          )}
         </div>
       </div>
       <div className="table-responsive">

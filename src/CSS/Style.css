@@ -130,7 +130,7 @@ table {
     background: #03a9f4;
 }
 
-.programPageTopics:hover .cardNumber {
+.programPageTopics:hover {
     color: #fff;
     font-weight: 900;
 }
@@ -216,6 +216,19 @@ table {
 .dropdown:focus {
     background-color: #333;
     color: #fff;
+}
+
+.topicsNamePlaceholder {
+    height: 60px;
+    width: 100px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.placeholderOfDropdown {
+    height: 40px;
+    padding: 0px;
+    width: 100%;
 }
 
 /* .dropdown option {
