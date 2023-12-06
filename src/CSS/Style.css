@@ -42,6 +42,55 @@ html {
     flex-wrap: wrap;
 }
 
+.homeHeadingAnimation {
+    position: relative;
+}
+
+.homeHeadingAnimation::before {
+    content: '';
+    position: absolute;
+    /* width: 0%; */
+    height: 3px;
+    background: #03a9f4;
+    margin-top: 10px;
+    top: 100%;
+    animation: homePageHeadingAnimation 4s forwards;
+    animation-iteration-count: infinite;
+}
+
+.homePageHeadingArrow {
+    animation: arrowColorChange 4s forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrowColorChange {
+
+    0%,
+    50%,
+    85% {
+        color: #fff;
+    }
+
+    100% {
+        color: #03a9f4;
+    }
+
+}
+
+.anim-delay-4000ms {
+    animation-delay: 4s;
+}
+
+@keyframes homePageHeadingAnimation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
 .customeClassForNav {
     background-color: rgb(40 40 40/1);
     /* background-color: #333; */
@@ -211,6 +260,22 @@ table {
     color: #fff;
     border: none;
     outline: none;
+}
+
+select option:hover,
+select option:focus,
+select option:active {
+    background: linear-gradient(#000000, #000000);
+    background-color: #000000 !important;
+    /* for IE */
+    color: #ffed00 !important;
+}
+
+select option:checked {
+    background: linear-gradient(#fff, #fff);
+    background-color: #fff !important;
+    /* for IE */
+    color: #000000 !important;
 }
 
 .dropdown:focus {

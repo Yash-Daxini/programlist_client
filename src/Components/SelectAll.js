@@ -13,7 +13,7 @@ const SelectAll = () => {
 
   useEffect(() => {
     // setTimeout(() => {
-      fetchPrograms();
+    fetchPrograms();
     // }, 4000);
   }, [isLoaded]);
 
@@ -118,7 +118,7 @@ const SelectAll = () => {
   const allTopics = topicsArray.map((topic) => {
     return (
       <>
-        <div className="text-center">
+        <div className="text-center my-4">
           <Link
             className="text-decoration-none cardNumber"
             to={`/SelectAllTopic/SelectByTopicName/${topic}`}
@@ -148,13 +148,46 @@ const SelectAll = () => {
 
   return (
     <div className="selectAll container-sm darkTheme p-2 mt-2">
-      <div>
+      <div className="mb-5">
+        <button
+          class="btn btn-outline-light"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          Find Topics Here
+        </button>
+
+        <div
+          class="offcanvas offcanvas-start bg-dark text-white"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header text-center">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+              Topics
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-white bg-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            {isLoaded.toString() === "false" ? allTopicsPlaceholder : allTopics}
+          </div>
+        </div>
+      </div>
+      {/* <div>
         <div className="selectAll container p-5 darkTheme">
           <div className="text-center d-flex gap-5 flex-wrap">
             {isLoaded.toString() === "false" ? allTopicsPlaceholder : allTopics}
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="d-flex justify-content-between">
         <div>
           <h1>Programs</h1>
@@ -172,7 +205,7 @@ const SelectAll = () => {
           ) : (
             <>
               <select
-                className="form-control m-2 dropdown"
+                className="form-control m-2 dropdown d-inline-flex focus-ring focus-ring-light py-1 px-2 text-decoration-none"
                 value={filterObj.program_topic}
                 onChange={(e) => {
                   setFilterObj({ ...filterObj, program_topic: e.target.value });
@@ -209,7 +242,7 @@ const SelectAll = () => {
                 {allTopicsName}
               </select>
               <select
-                className="form-control m-2 dropdown"
+                className="form-control m-2 dropdown d-inline-flex focus-ring focus-ring-light py-1 px-2 text-decoration-none"
                 value={filterObj.difficulty}
                 onChange={(e) => {
                   setFilterObj({
