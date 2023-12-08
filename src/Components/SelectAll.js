@@ -122,6 +122,7 @@ const SelectAll = () => {
           <Link
             className="text-decoration-none cardNumber"
             to={`/SelectAllTopic/SelectByTopicName/${topic}`}
+            target="_blank"
           >
             <div className="programPageTopics">
               <div
@@ -150,7 +151,7 @@ const SelectAll = () => {
     <div className="selectAll container-sm darkTheme p-2 mt-2">
       <div className="mb-5">
         <button
-          class="btn btn-outline-light"
+          class="btn btn-outline-light fs-5 p-3"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasExample"
@@ -181,13 +182,6 @@ const SelectAll = () => {
           </div>
         </div>
       </div>
-      {/* <div>
-        <div className="selectAll container p-5 darkTheme">
-          <div className="text-center d-flex gap-5 flex-wrap">
-            {isLoaded.toString() === "false" ? allTopicsPlaceholder : allTopics}
-          </div>
-        </div>
-      </div> */}
       <div className="d-flex justify-content-between">
         <div>
           <h1>Programs</h1>
