@@ -1,2 +1,7 @@
 /*    /index.html   200
+/SelectAll           /programs           301
+/programs/SelectByID/:id  programs/program/:id      301
+
+
+
 
