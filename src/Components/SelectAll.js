@@ -139,7 +139,7 @@ const SelectAll = () => {
   });
 
   let allTopicsPlaceholder = [];
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 10; i++) {
     allTopicsPlaceholder.push(
       <div className="text-center placeholder-glow topicsNamePlaceholder">
         <span className="placeholder w-100 h-100"></span>

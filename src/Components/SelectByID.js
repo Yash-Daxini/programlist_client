@@ -5,11 +5,7 @@ import { useLocation, useParams } from "react-router-dom";
 const SelectByID = () => {
   const [programObj, setProgramObj] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
   const params = useParams();
-
-  // const navigate = useNavigate();
-
   const location = useLocation();
 
   useEffect(() => {
@@ -43,10 +39,6 @@ const SelectByID = () => {
     }
   }, [location.key, isLoading]);
 
-  
-
-
-
   return (
     <>
       {!isLoading ? (
@@ -73,48 +65,71 @@ const SelectByID = () => {
                   )}
                 </div>
                 <div className="my-5 d-flex flex-column justify-content-center align-items-center">
-                  {/* <button className="btn btn-outline-primary mx-5">
-          <Link
-            to={programObj.program_link}
-            className="text-decoration-none text-light"
-            target={"_blank"}
-          >
-            Solve Here{" "}
-          </Link>
-        </button>
-        <button className="btn btn-outline-primary mx-5">
-          <Link
-            to={programObj.solution_link}
-            className="text-decoration-none text-light"
-            target={"_blank"}
-          >
-            See Solution{" "}
-          </Link>
-        </button> */}
                   <p>{programObj.program_description}</p>
 
                   <p>
-                    Input : {" "}
+                    Input :{" "}
                     {programObj.program_testcases !== null
-                      ?  programObj.program_testcases.input
+                      ? programObj.program_testcases.input
                       : ""}
                   </p>
                   <p>
-                    Output : {" "}
+                    Output :{" "}
                     {programObj.program_testcases !== null
-                      ?  programObj.program_testcases.output
-                      :  ""}
+                      ? programObj.program_testcases.output
+                      : ""}
                   </p>
                 </div>
               </div>
-              <div className="bg-dark compiler mb-5">
-                <div className="comp bg-dark text-white" data-pym-src="https://www.jdoodle.com/plugin/v0/2e28a111104a265988dbce9b3f71a0ef/2dfd313b1308059a6006df5a0de7cf4e?stdin=0&arg=0"></div>
+              <div className="compiler mb-5">
+                <div
+                  data-pym-src="https://www.jdoodle.com/plugin/v0/2e28a111104a265988dbce9b3f71a0ef/2dfd313b1308059a6006df5a0de7cf4e"
+                ></div>
               </div>
             </div>
           </div>
         </>
       ) : (
-        <></>
+        <>
+          <div className="container-fluid">
+            <div className="d-flex justify-content-center flex-column align-items-center">
+              <h1 className="my-5 placeholder-glow w-50">
+                <span className="placeholder col-6"></span>
+              </h1>
+            </div>
+            <div className="d-flex justify-content-center flex-wrap gap-4">
+              <div className="description">
+                <div className="d-flex justify-content-center align-items-center flex-column">
+                  <h4 className="fs-3 placeholder-glow w-75">
+                    <span className="placeholder col-12"></span>
+                  </h4>
+                  <hr />
+                  <h4 className="placeholder-glow w-25 fs-2">
+                    <span className="placeholder col-6"></span>
+                  </h4>
+                </div>
+                <div className="my-5 d-flex flex-column justify-content-center align-items-center">
+                  <p className="placeholder-glow fs-6 w-100">
+                    <span className="placeholder col-12 my-2"></span>
+                    <span className="placeholder col-9 my-2"></span>
+                    <span className="placeholder col-6 my-2"></span>
+                    <span className="placeholder col-3 my-2 mx-2"></span>
+                  </p>
+
+                  <p className="placeholder-glow fs-6 w-100">
+                    <span className="placeholder col-3 my-2 mx-2"></span>
+                    <span className="placeholder col-3 my-2 mx-2"></span>
+                  </p>
+                </div>
+              </div>
+              <div className="bg-dark compiler mb-5" style={{ height: "80vh" }}>
+                <div className="placeholder-glow w-100 h-100">
+                  <span className="placeholder col-12 h-100"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
       )}
     </>
   );

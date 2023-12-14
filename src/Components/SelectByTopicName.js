@@ -63,23 +63,23 @@ const SelectByTopicName = () => {
     );
   });
   let allProgramsPlaceholder = [];
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 10; i++) {
     allProgramsPlaceholder.push(
       <tr>
-        <td className="placeholder-glow">
-          <span className="placeholder col-6"></span>
+        <td className="placeholder-glow w-25">
+          <span className="placeholder col-12"></span>
         </td>
         <td className="placeholder-glow">
-          <span className="placeholder col-6"></span>
+          <span className="placeholder col-4"></span>
         </td>
         <td className="placeholder-glow">
-          <span className="placeholder col-6"></span>
+          <span className="placeholder col-4"></span>
         </td>
         <td className="placeholder-glow">
-          <span className="placeholder col-6"></span>
+          <span className="placeholder col-4"></span>
         </td>
         <td className="placeholder-glow">
-          <span className="placeholder col-6"></span>
+          <span className="placeholder col-2"></span>
         </td>
       </tr>
     );

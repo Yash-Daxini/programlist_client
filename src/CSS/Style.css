@@ -304,26 +304,38 @@ select option:checked {
 .compiler {
     width: 60%;
 }
+
 .ace_content {
     background-color: #000 !important;
 }
+
 .ace_layer.ace_gutter-layer.ace_folding-enabled {
     background-color: #000 !important;
 }
+
 div#code {
     background-color: #000;
     color: #fff;
 }
-/* .dropdown option {
-    background-color: #333;
-    box-shadow: 0px 1px 0 #333, 0px -1px 0 #333;
-    -webkit-box-shadow: 0px 1px 0 #333, 0px -1px 0 #333;
-    -moz-box-shadow: 0px 1px 0 #333, 0px -1px 0 #333;
-} */
 
-/* .dropdown option:hover {
-    background-color: #333;
-} */
+.compiler {
+    background: #333;
+    border-radius: 40px;
+}
+
+.compiler {
+    animation: backgroundLoad 4s infinite;
+}
+
+@keyframes backgroundLoad {
+    from {
+        background: #333;
+    }
+
+    to {
+        background: #555;
+    }
+}
 
 @media only screen and (max-width: 1020px) {
     .cardBox {
