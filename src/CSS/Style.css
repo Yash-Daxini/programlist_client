@@ -324,16 +324,20 @@ div#code {
 }
 
 .compiler {
-    animation: backgroundLoad 4s infinite;
+    animation: backgroundLoad 3s infinite;
+    animation-timing-function: linear;
 }
 
 @keyframes backgroundLoad {
-    from {
-        background: #333;
+    0%,20%,100% {
+        background: #444;
     }
 
-    to {
+    40%,90%{
         background: #555;
+    }
+    70%,80%{
+        background:  #666;
     }
 }
 

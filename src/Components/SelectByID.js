@@ -82,9 +82,7 @@ const SelectByID = () => {
                 </div>
               </div>
               <div className="compiler mb-5">
-                <div
-                  data-pym-src="https://www.jdoodle.com/plugin/v0/2e28a111104a265988dbce9b3f71a0ef/2dfd313b1308059a6006df5a0de7cf4e"
-                ></div>
+                <div data-pym-src="https://www.jdoodle.com/plugin/v0/2e28a111104a265988dbce9b3f71a0ef/2dfd313b1308059a6006df5a0de7cf4e"></div>
               </div>
             </div>
           </div>
@@ -122,7 +120,7 @@ const SelectByID = () => {
                   </p>
                 </div>
               </div>
-              <div className="bg-dark compiler mb-5" style={{ height: "80vh" }}>
+              <div className="bg-dark compiler mb-5" style={{ height: "50vh" }}>
                 <div className="placeholder-glow w-100 h-100">
                   <span className="placeholder col-12 h-100"></span>
                 </div>
