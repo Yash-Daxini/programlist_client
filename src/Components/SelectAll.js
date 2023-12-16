@@ -44,11 +44,11 @@ const SelectAll = () => {
           <td style={{ textTransform: "capitalize" }}>
             {program.program_topic}
           </td>
-          <td>
+          {/* <td>
             <Link to={program.program_link} target="_blank">
               <ion-icon name="link-outline"></ion-icon>
             </Link>
-          </td>
+          </td> */}
           <td>
             <Link to={program.program_solutionLink} target="_blank">
               <ion-icon name="link-outline"></ion-icon>
@@ -82,9 +82,9 @@ const SelectAll = () => {
         <td className="placeholder-glow">
           <span className="placeholder col-4"></span>
         </td>
-        <td className="placeholder-glow">
+        {/* <td className="placeholder-glow">
           <span className="placeholder col-4"></span>
-        </td>
+        </td> */}
         <td className="placeholder-glow">
           <span className="placeholder col-4"></span>
         </td>
@@ -287,7 +287,7 @@ const SelectAll = () => {
             <tr>
               <th scope="col">Name</th>
               <th scope="col">Topic</th>
-              <th scope="col">Program Link</th>
+              {/* <th scope="col">Program Link</th> */}
               <th scope="col">Solution Link</th>
               <th scope="col">Difficulty</th>
             </tr>
