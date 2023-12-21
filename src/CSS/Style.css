@@ -299,10 +299,18 @@ select option:checked {
 .description {
     width: 35%;
     text-align: start;
+    letter-spacing: 1.2px;
+    word-spacing: 2px;
+}
+.description .accordion {
+    text-align: start;
+    letter-spacing: 0px;
+    word-spacing: 0px;
 }
 
 .compiler {
     width: 60%;
+    height: 100%;
 }
 
 .ace_content {
@@ -329,15 +337,21 @@ div#code {
 }
 
 @keyframes backgroundLoad {
-    0%,20%,100% {
+
+    0%,
+    20%,
+    100% {
         background: #444;
     }
 
-    40%,90%{
+    40%,
+    90% {
         background: #555;
     }
-    70%,80%{
-        background:  #666;
+
+    70%,
+    80% {
+        background: #666;
     }
 }
 
@@ -442,4 +456,8 @@ div#code {
     transition: height .2s ease;
     background: #000;
     color: #fff;
+}
+
+.accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }

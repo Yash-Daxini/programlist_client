@@ -48,37 +48,80 @@ const SelectByID = () => {
             <div className="d-flex justify-content-center flex-wrap gap-4">
               <div className="description">
                 <div className="d-flex justify-content-center align-items-center flex-column">
-                  <h4 className="fs-5">Topic : {programObj.program_topic} </h4>
-                  <hr />
-                  {programObj.difficulty === "Easy" ? (
-                    <h4 className="customBadgeSuccess">
-                      <span className="fs-6">{programObj.difficulty}</span>
-                    </h4>
-                  ) : programObj.difficulty === "Medium" ? (
-                    <h4 className="customBadgeWarning">
-                      <span className="fs-6">{programObj.difficulty}</span>
-                    </h4>
-                  ) : (
-                    <h4 className="customBadgeDanger">
-                      <span className="fs-6">{programObj.difficulty}</span>
-                    </h4>
-                  )}
+                  <div className="d-flex justify-content-center align-items-center gap-5">
+                    <h4 className="fs-6">{programObj.program_topic}</h4>
+                    {programObj.difficulty === "Easy" ? (
+                      <span className="customBadgeSuccess">
+                        <span className="fs-6">{programObj.difficulty}</span>
+                      </span>
+                    ) : programObj.difficulty === "Medium" ? (
+                      <span className="customBadgeWarning">
+                        <span className="fs-6">{programObj.difficulty}</span>
+                      </span>
+                    ) : (
+                      <span className="customBadgeDanger">
+                        <span className="fs-6">{programObj.difficulty}</span>
+                      </span>
+                    )}
+                  </div>
                 </div>
-                <div className="my-5 d-flex flex-column justify-content-center align-items-center">
+                <div className="my-5 d-flex flex-column justify-content-center align-items-start gap-3">
                   <p>{programObj.program_description}</p>
-
-                  <p>
-                    Input :{" "}
-                    {programObj.program_testcases !== null
-                      ? programObj.program_testcases.input
-                      : ""}
-                  </p>
-                  <p>
-                    Output :{" "}
-                    {programObj.program_testcases !== null
-                      ? programObj.program_testcases.output
-                      : ""}
-                  </p>
+                  <h5>
+                    <span class="badge p-2" style={{ background: "#555" }}>
+                      Input :{" "}
+                      {programObj.program_testcases !== null
+                        ? programObj.program_testcases.input
+                        : ""}
+                    </span>
+                  </h5>
+                  <h5>
+                    <span class="badge p-2" style={{ background: "#555" }}>
+                      Output :{" "}
+                      {programObj.program_testcases !== null
+                        ? programObj.program_testcases.output
+                        : ""}
+                    </span>
+                  </h5>
+                </div>
+                <div
+                  className="accordion accordion-flush"
+                  id="accordionFlushExample"
+                >
+                  <div
+                    className="accordion-item text-white"
+                    style={{ background: "#444", border: "5px solid #444" }}
+                  >
+                    <h2 className="accordion-header">
+                      <button
+                        className="accordion-button text-white collapsed"
+                        style={{ background: "#444" }}
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseOne"
+                      >
+                        Solution
+                      </button>
+                    </h2>
+                    <div
+                      id="flush-collapseOne"
+                      className="accordion-collapse collapse text-white"
+                      data-bs-parent="#accordionFlushExample"
+                    >
+                      <div className="accordion-body text-white">
+                        <div
+                          className="mb-4 mt-0 p-1 text-center border border-1"
+                          style={{ width: "60px" }}
+                        >
+                          <code className="fs-5">Java</code>
+                        </div>
+                        <hr></hr>
+                        <pre>{programObj.program_solution}</pre>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="compiler mb-5">
@@ -113,11 +156,19 @@ const SelectByID = () => {
                     <span className="placeholder col-6 my-2"></span>
                     <span className="placeholder col-3 my-2 mx-2"></span>
                   </p>
-
                   <p className="placeholder-glow fs-6 w-100">
                     <span className="placeholder col-3 my-2 mx-2"></span>
                     <span className="placeholder col-3 my-2 mx-2"></span>
                   </p>
+                </div>
+                <div
+                  className="accordion accordion-flush placeholder-glow my-4"
+                  id="accordionFlushExample"
+                >
+                  <span
+                    className="placeholder col-12"
+                    style={{ height: "50px" }}
+                  ></span>
                 </div>
               </div>
               <div className="bg-dark compiler mb-5" style={{ height: "50vh" }}>
